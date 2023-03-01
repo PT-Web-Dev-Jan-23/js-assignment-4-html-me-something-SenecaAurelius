@@ -30,7 +30,7 @@ describe ("Grading Tests: ", function () {
          container = window.document;
       });
    });
-
+   //test 1
    it("HTML includes the correct number of certain elements", function() {
          let pElements = container.body.getElementsByTagName("P").length;
          let headerElements = container.body.getElementsByTagName("Header").length;
@@ -46,34 +46,34 @@ describe ("Grading Tests: ", function () {
          expect(articleElements).toBeGreaterThanOrEqual(1);
          expect(imageElements).toBeGreaterThanOrEqual(1);
    })
-
+   //test 2
    it("HTML contains correct number of sections", function() {
       let childrenElements = container.body.children;
 
       expect(childrenElements.length).toBeGreaterThanOrEqual(3);
       expect(childrenElements.length).toBeLessThanOrEqual(10);
    })
-
+   //test 3
    it("HTML includes external CSS script", function() {
       let linkElement = container.getElementsByTagName("Link");
       expect(linkElement.item(0).href.includes('styles.css')).toBeTrue();
    })
-
+   //test 4
    it("CSS body sets margin and display", function() {
       expect(window.getComputedStyle(container.body).display).toEqual("block");
       expect(window.getComputedStyle(container.body).margin).toEqual("8px");
    })
-
+   //test 5
    it("CSS funParagraph class is green", function() {
       let funParagraphElement = container.getElementById("testP");
       expect(window.getComputedStyle(funParagraphElement).color).toEqual("green");
    })
-
+   //test 6
    it("CSS mainHeading id is red", function() {
       let headingElement = container.getElementById("mainHeading");
       expect(window.getComputedStyle(headingElement).color).toEqual("red");
    })
-
+   //test 7
    it("HTML includes HTML entities", function() {
       // Regex pattern: /(&.+;)/ig
       const regex = /(&.+;)/ig;
